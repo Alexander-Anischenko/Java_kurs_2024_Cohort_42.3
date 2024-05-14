@@ -29,8 +29,8 @@ public class IntArrayList {
     }
 
     private void increaseArray() {
-        double siceOfNeuArray = this.data.length * 1.5;
-        int[] newArray = new int[(int) siceOfNeuArray];
+        double sizeOfNeuArray = this.data.length * 1.5;
+        int[] newArray = new int[(int) sizeOfNeuArray];
 
         for (int i = 0; i < this.data.length; i++) {
             newArray[i] = this.data[i];
