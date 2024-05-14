@@ -1,5 +1,7 @@
 package lesson28.homeWork28;
 
+import java.util.Arrays;
+
 public class CarArrayList implements ArrayList{
 
     private static final int INIT_ARRAY_SIZE = 3;
@@ -44,5 +46,13 @@ public class CarArrayList implements ArrayList{
         this.count -= 1;
 
         return  value;
+    }
+
+    @Override
+    public String toString() {
+        return "CarArrayList{" +
+                "count=" + count +
+                ", data=" + Arrays.toString(data) +
+                '}';
     }
 }
