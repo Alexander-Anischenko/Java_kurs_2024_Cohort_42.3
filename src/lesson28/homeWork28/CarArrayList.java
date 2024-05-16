@@ -17,12 +17,12 @@ public class CarArrayList implements ArrayList{
     @Override
     public void add(Car value) {
         if (this.count == this.data.length) {
-            Car[] neuData = new Car[(int) (this.data.length * SIZE_INCREMENT)];
+            Car[] newData = new Car[(int) (this.data.length * SIZE_INCREMENT)];
             for (int i = 0; i < this.data.length; i++) {
-                neuData[i] = data[i];
+                newData[i] = data[i];
 
             }
-            data = neuData;
+            data = newData;
         }
         data[this.count] = value;
         this.count++;
