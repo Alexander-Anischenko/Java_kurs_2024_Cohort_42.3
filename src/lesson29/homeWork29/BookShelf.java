@@ -76,20 +76,14 @@ class Main2 {
         bookShelf.addBook("Аристономия", "Борис Акунин", 2012);
 
         System.out.println(bookShelf);
+        System.out.println("<========================================>");
 
         // Создать объект внутреннего класса Iterator и вызвать на нем несколько раз метод nextBook
         BookShelf.Iterator iterator = bookShelf.new Iterator();
-        iterator.nextBook();
-        System.out.println(iterator);
-        iterator.nextBook();
-        System.out.println(iterator);
-        iterator.nextBook();
-        System.out.println(iterator);
-        iterator.nextBook();
-        System.out.println(iterator);
-        iterator.nextBook();
-        System.out.println(iterator);
-
+        System.out.println(iterator.nextBook());
+        System.out.println(iterator.nextBook());
+        System.out.println(iterator.nextBook());
+        System.out.println(iterator.nextBook());
 
     }
 }
