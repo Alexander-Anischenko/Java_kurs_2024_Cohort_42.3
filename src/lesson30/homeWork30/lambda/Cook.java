@@ -20,7 +20,7 @@ private Cooking cooking;
     }
 
     public void order() {
-        System.out.println("The cook got the orde to cook " + this.order + ".");
+        System.out.println("The cook got the order to cook " + this.order + ".");
         this.cooking.cooking();
     }
 }
