@@ -2,7 +2,7 @@ package lesson31.homeWork31.library.dao;
 
 import lesson31.homeWork31.library.model.Book;
 
-public class LibraryImpl implements Library{
+public class LibraryImpl implements Library {
 
     private Book[] books;
 
@@ -42,7 +42,7 @@ public class LibraryImpl implements Library{
                 victim =books[i];
                 books[i] = books[size - 1];
                 books[size - 1] = null;
-                size++;
+                size--;
                 break;
             }
         }
