@@ -101,8 +101,8 @@ class CompanyImplTest {
     void findEmployeeSalaryRange() {
         company.printEmployee();
         Employee[] actual = company.findEmployeeSalaryRange(2900, 6000);
-        Employee[] expcted = {e[0], e[2]};
-        assertArrayEquals(expcted, actual);
+        Employee[] expected = {e[0], e[2]};
+        assertArrayEquals(expected, actual);
     }
 }
 

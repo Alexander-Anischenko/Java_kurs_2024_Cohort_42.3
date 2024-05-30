@@ -64,5 +64,6 @@ class LibraryImplTest {
 
     @Test
     void getSize() {
+        assertEquals(3, library.getSize());
     }
 }

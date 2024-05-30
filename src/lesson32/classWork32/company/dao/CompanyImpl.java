@@ -114,7 +114,7 @@ public class CompanyImpl implements Company {
             }
         }
         Employee[] res = new Employee[count];
-        for (int i = 0, j = 0; i < res.length; i++) {
+        for (int i = 0, j = 0; i < size; i++) {
             if (employees[i].calcSalary() > min && employees[i].calcSalary() < max) {
                 res[j++] = employees[i];
             }
