@@ -5,8 +5,9 @@ import lesson32.homeWork32.library.model.Book;
 public interface Library {
 
     // Abstract methods
-    boolean createBook(lesson32.homeWork32.library.model.Book book);
+    boolean createBook(Book book);
     Book findBook(long isbn);
+    Book findAuthor(String author);
     Book removeBook(long isbn);
     void printBooks();
     int getSize();

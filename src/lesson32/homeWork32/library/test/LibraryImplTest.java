@@ -16,11 +16,11 @@ class LibraryImplTest {
     void setUp() {
         library = new LibraryImpl(4);
         b = new Book[3];
-        b[0] =new Book("Author1", 1000000000000l, "Title1", 2001);
-        b[1] =new Book("Author2", 1000000000001l, "Title2", 2002);
-        b[2] =new Book("Author3", 1000000000002l, "Title2", 2003);
+        b[0] =new Book("QAuthor1", 1000000000000l, "Title1", 2001);
+        b[1] =new Book("SAuthor2", 1000000000001l, "Title2", 2002);
+        b[2] =new Book("DAuthor3", 1000000000002l, "Title2", 2003);
 
-        // необходимо добавить злементы массива в объект company
+        // необходимо добавить злементы массива в объект library
         for (int i = 0; i < b.length; i++) {
             library.createBook(b[i]);
         }
@@ -65,5 +65,16 @@ class LibraryImplTest {
     @Test
     void getSize() {
         assertEquals(3, library.getSize());
+    }
+
+    @Test
+    void findAuthor() {
+        assertEquals(b[2], library.findAuthor("DAuthor3"));
+        assertNull(library.findAuthor("jgjg"));
+    }
+
+    @Test
+    void compareTo() {
+
     }
 }

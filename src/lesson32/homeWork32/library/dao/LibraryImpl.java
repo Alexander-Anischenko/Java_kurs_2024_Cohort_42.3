@@ -35,6 +35,16 @@ public class LibraryImpl implements Library{
     }
 
     @Override
+    public Book findAuthor(String author) {
+        for (int i = 0; i < size; i++) {
+            if (books[i].getAuthor() == author) {
+                return books[i];
+            }
+        }
+        return null;
+    }
+
+    @Override
     public Book removeBook(long isbn) {
         Book victim = null;
         for (int i = 0; i < size; i++) {
@@ -58,7 +68,8 @@ public class LibraryImpl implements Library{
     }
 
     @Override
-    public int getSize() {
+    public int getSize()
+    {
         return size;
     }
 }

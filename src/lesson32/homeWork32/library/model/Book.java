@@ -2,7 +2,7 @@ package lesson32.homeWork32.library.model;
 
 import java.util.Objects;
 
-public class Book {
+public class Book implements Comparable<Book>{
 
     public static final int ISBN_LENGTH = 13; // Константа (final - значение константы изменить нельзя)
 
@@ -64,11 +64,16 @@ public class Book {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Book book)) return false;
-        return isbn == book.isbn;
+        return yearOfPublishing == book.yearOfPublishing && isbn == book.isbn && Objects.equals(title, book.title) && Objects.equals(author, book.author);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(isbn);
+        return Objects.hash(title, author, yearOfPublishing, isbn);
+    }
+
+    @Override
+    public int compareTo(Book o) {
+        return this.author.compareTo(o.author);
     }
 }
