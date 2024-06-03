@@ -104,5 +104,10 @@ class CompanyImplTest {
         Employee[] expected = {e[0], e[2]};
         assertArrayEquals(expected, actual);
     }
+    @Test
+    void updateEmployee() {
+        Employee upEmployee = company.updateEmployee(102, "White");
+        assertEquals("White", upEmployee.getSecondName());
+    }
 }
 

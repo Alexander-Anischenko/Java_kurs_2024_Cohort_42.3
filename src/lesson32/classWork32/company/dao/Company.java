@@ -28,4 +28,7 @@ public interface Company {
     // список сотрудников с зарплатой от ... до ...
     Employee[] findEmployeeSalaryRange(double min, double max);
 
+    //new method
+    Employee updateEmployee(int id,String secondName);
+
 }

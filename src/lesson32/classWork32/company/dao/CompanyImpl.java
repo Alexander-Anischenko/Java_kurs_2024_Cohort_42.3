@@ -121,4 +121,18 @@ public class CompanyImpl implements Company {
         }
         return res;
     }
+
+    @Override
+    public Employee updateEmployee(int id, String secondName) {
+        //перебираем всех employee
+        for (Employee employee : employees) {
+            //ищем по id
+            if (employee.getId() == id) {
+                //использовать setter secondName
+                employee.setSecondName(secondName);
+                return employee;//обьект типа Employee
+            }
+        }
+        return null;
+    }
 }

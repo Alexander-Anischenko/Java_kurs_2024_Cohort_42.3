@@ -74,7 +74,7 @@ public abstract class Employee {
 
     @Override
     public String toString() {
-       StringBuilder sb = new StringBuilder("Employee");
+       StringBuilder sb = new StringBuilder("Employee ");
        sb.append("id = ").append(id);
        sb.append(", firstName: ").append(firstName);
        sb.append(", second name: ").append(secondName);
