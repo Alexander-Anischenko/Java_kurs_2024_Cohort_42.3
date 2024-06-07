@@ -1,6 +1,6 @@
 package lesson33.classWork33.cats.tests;
 
-import lesson33.classWork33.cats.Cat;
+import glesson33.classWork33.cats.Cat;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -42,7 +42,6 @@ class CatTest {
         Arrays.sort(cat, catComparator); // сортируем
         printArray(cat);// печатаем после сортировки
     }
-
     @Test
     void testCatComparator2() {
         Comparator<Cat> catComparator = new Comparator<Cat>() {
