@@ -25,7 +25,7 @@ class CatTest {
     void testCatSort() {
         System.out.println("<===Test Cat sorting===>");
         printArray(cat);
-        Arrays.sort(cat); //производим сортировку
+        Arrays.sort(cat); //производим сортировку по полю указаному в методе compareTo
         System.out.println("<==After sorting by age===>");
         printArray(cat);
     }
