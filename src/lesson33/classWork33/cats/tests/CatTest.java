@@ -1,6 +1,6 @@
 package lesson33.classWork33.cats.tests;
 
-import glesson33.classWork33.cats.Cat;
+import lesson33.classWork33.cats.Cat;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
