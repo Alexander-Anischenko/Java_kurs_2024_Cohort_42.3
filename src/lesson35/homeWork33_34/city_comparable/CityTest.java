@@ -1,6 +1,5 @@
-package lesson34.classWork34.city_comparable;
+package lesson35.homeWork33_34.city_comparable;
 
-import lesson35.homeWork33_34.city_comparable.City;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +18,7 @@ public class CityTest {
         cities[4] = new City("New York", 8_500_000, "USA", 6.5);
         cities[5] = new City("Dallas", 1_300_000, "USA", 3.0);
     }
-    private void printArray(Object[]arr, String reportTitle) {
+    private void printArray(Object[] arr, String reportTitle) {
         System.out.println("<=======" + reportTitle + "========>");
         for (Object o : arr) {
             System.out.println(o);
