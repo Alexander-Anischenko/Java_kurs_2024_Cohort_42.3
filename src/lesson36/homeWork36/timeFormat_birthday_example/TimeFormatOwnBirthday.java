@@ -16,6 +16,10 @@ public class TimeFormatOwnBirthday {
 
         dtf = DateTimeFormatter.ofPattern("dd MMMM yyyy", Locale.GERMANY);
         System.out.println(ownBirthday.format(dtf));
+        System.out.println("<=====================================>");
+        dtf = DateTimeFormatter.ofPattern("E, dd MMMM yyyy");
+        System.out.println(ownBirthday.format(dtf));
+
 
         // parsing date from string
         System.out.println("<==================parsing date from string===================>");
@@ -27,7 +31,7 @@ public class TimeFormatOwnBirthday {
         // пример из https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html
         LocalDate dat = LocalDate.now();
         System.out.println(dat);// нынешняя дата
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MM yyyy");// формат можно менять
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("E, MMM dd yyyy");// формат можно менять
         String text = dat.format(formatter);
         System.out.println(text);// перевод даты в строку
         LocalDate parsedDate = LocalDate.parse(text, formatter);
