@@ -3,7 +3,7 @@ package lesson37.homeWork37.archive.model;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class Document {
+public class Document implements Comparable<Document>{
 
     //fields
     private int folderId;
@@ -71,5 +71,12 @@ public class Document {
     @Override
     public int hashCode() {
         return Objects.hash(folderId, documentId);
+    }
+
+    @Override
+    public int compareTo(Document o) {
+        //sort by folderId and then by documentId
+        int res = Integer.compare(folderId, o.folderId); //сравниваем по documentId
+        return res != 0 ? res : Integer.compare(documentId, o.documentId);
     }
 }
