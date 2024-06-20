@@ -105,8 +105,8 @@ public class AlbumImpl implements Album{
     }
 
     @Override
-    public Photo[] getPhotoBetweenDate(LocalDate daeFrom, LocalDate dateTo) {
-        Photo pattern = new Photo(0, Integer.MIN_VALUE, null, null, daeFrom.atStartOfDay());
+    public Photo[] getPhotoBetweenDate(LocalDate dateFrom, LocalDate dateTo) {
+        Photo pattern = new Photo(0, Integer.MIN_VALUE, null, null, dateFrom.atStartOfDay());
         // левый край
         int from = Arrays.binarySearch(photos, 0, size, pattern, comparator);
         from = from >= 0 ? from : - from - 1;

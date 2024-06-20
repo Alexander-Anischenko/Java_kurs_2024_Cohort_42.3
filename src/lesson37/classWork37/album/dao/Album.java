@@ -10,6 +10,6 @@ public interface Album {
     boolean updatePhoto(int photoId, int albumId, String url);
     Photo getPhotoFromAlbum(int photoId, int albumId);
     Photo[] getAllPhotosFromAlbum(int albumId);
-    Photo[] getPhotoBetweenDate(LocalDate daeFrom, LocalDate dateTo);
+    Photo[] getPhotoBetweenDate(LocalDate dateFrom, LocalDate dateTo);
     int size();
 }
