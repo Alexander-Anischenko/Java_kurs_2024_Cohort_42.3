@@ -96,7 +96,14 @@ class ArchiveImplTest {
     void getDocsBetweenDate() {
         LocalDate ld = now.toLocalDate(); // leave only the date
         Document[] actual = archive.getDocsBetweenDate(ld.minusDays(6), ld.minusDays(1));
+        for (Document d : actual) {
+            System.out.println(d);
+        }
+        System.out.println("<==============After sorting===============>");
         Arrays.sort(actual);//sorting
+        for (Document d : actual) {
+            System.out.println(d);
+        }
         Document[] expected = {doc[0], doc[1], doc[2]};
         assertArrayEquals(expected, actual);
     }
