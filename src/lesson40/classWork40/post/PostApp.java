@@ -13,7 +13,7 @@ public class PostApp {
 
         String newPostCode;
 
-        System.out.println("Welcome to post Qffice!");
+        System.out.println("Welcome to post Office!");
         Scanner scanner = new Scanner(System.in);
 
         do {
