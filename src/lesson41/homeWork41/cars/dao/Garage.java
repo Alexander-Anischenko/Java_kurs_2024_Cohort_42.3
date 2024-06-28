@@ -11,5 +11,6 @@ public interface Garage {
     Car[] findCarByCompany(String company);
     Car[] findCarByEngine(double min, double max);
     Car[] findCarByColor(String color);
+    int quantity();
 
 }

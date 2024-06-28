@@ -11,7 +11,9 @@ public class GarageImpl implements Garage{
     // constructor гараж шмеет вместимость(capacity)
     public GarageImpl(int capacity) {
         this.cars = new Car[capacity];
+        this.size = 0;
     }
+
 
     @Override
     public boolean addCar(Car car) {
@@ -31,7 +33,7 @@ public class GarageImpl implements Garage{
         // используем цикл fori, чтобы оббежать весь массив
         for (int i = 0; i < size; i++) {
             // если regNumber равен существующему запоминаем индекс объекта в массиве
-            if (cars[i].getRegNumber() == regNumber) {
+            if (cars[i].getRegNumber().equals(regNumber)) {
                 // присваиваем соответствующему индексу cars[i] значение жертвы
                 Car victim = cars[i];
                 // удаляем этот индекс и переписываем массив заменяя текущий элемент последним элементом, уменьшая его значение на 1
@@ -51,7 +53,7 @@ public class GarageImpl implements Garage{
         // используем цикл fori, чтобы оббежать весь массив
         for (int i = 0; i < size; i++) {
             // если regNumber равен существующему запоминаем индекс объекта в массиве
-            if (cars[i].getRegNumber() == regNumber) {
+            if (cars[i].getRegNumber().equals(regNumber)) {
                 // возвращаем совпавший по индексу объект
                 return cars[i];
             }
@@ -67,7 +69,7 @@ public class GarageImpl implements Garage{
         // используем цикл fori, чтобы оббежать весь массив
         for (int i = 0; i < size; i++) {
             // если model равен существующему запоминаем индекс объекта в массиве
-            if (cars[i].getModel() == model) {
+            if (cars[i].getModel().equals(model)) {
                 // увеличиваем значение счетчика на 1 при каждом совпадении
                 count++;
             }
@@ -75,11 +77,12 @@ public class GarageImpl implements Garage{
         //создаем новый массив res машин с длинной счетчика
         Car[] res = new Car[count];
         // используем цикл fori, чтобы оббежать весь массив, используем целочисленную j, для копирования индексов массива cars
-        for (int i = 0, j = 0; i < res.length; i++) {
+        for (int i = 0, j = 0; i < size; i++) {
             // если model равен существующему запоминаем индекс объекта в массиве
-            if (cars[i].getModel() == model) {
-                // копируем объекты из массива cars в массив res по индексам
-                res[j] = cars[i];
+            if (cars[i].getModel().equals(model)) {
+                // копируем объекты из массива cars в массив res по индексам увеличивая его
+                res[j++] = cars[i];
+
             }
         }
         // возвращаем массив res
@@ -90,14 +93,14 @@ public class GarageImpl implements Garage{
     public Car[] findCarByCompany(String company) {
         int count = 0;
         for (int i = 0; i < size; i++) {
-            if (cars[i].getCompany() == company) {
+            if (cars[i].getCompany().equals(company)) {
                 count++;
             }
         }
         Car[] res = new Car[count];
-        for (int i = 0, j = 0; i < res.length; i++) {
-            if (cars[i].getCompany() == company) {
-                res[j] = cars[i];
+        for (int i = 0, j = 0; i < size; i++) {
+            if (cars[i].getCompany().equals(company)) {
+                res[j++] = cars[i];
             }
         }
         return res;
@@ -133,16 +136,21 @@ public class GarageImpl implements Garage{
     public Car[] findCarByColor(String color) {
         int count = 0;
         for (int i = 0; i < size; i++) {
-            if (cars[i].getColor() == color) {
+            if (cars[i].getColor().equals(color)) {
                 count++;
             }
         }
         Car[] res = new Car[count];
-        for (int i = 0, j = 0; i < res.length; i++) {
-            if (cars[i].getColor() == color) {
-                res[j] = cars[i];
+        for (int i = 0, j = 0; i < size; i++) {
+            if (cars[i].getColor().equals(color)) {
+                res[j++] = cars[i];
             }
         }
         return res;
+    }
+
+    @Override
+    public int quantity() {
+        return size;
     }
 }
