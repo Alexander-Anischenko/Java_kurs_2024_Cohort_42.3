@@ -22,6 +22,7 @@ public class GarageHashSetImpl implements Garage {
     // constructor гараж шмеет вместимость(capacity)
     public GarageHashSetImpl(int capacity) {
         this.cars = new HashSet<>();
+        // не нужно поле size, протму-что HashSet сам меняет размер по необходимости
         this.capacity = capacity;
     }
 
