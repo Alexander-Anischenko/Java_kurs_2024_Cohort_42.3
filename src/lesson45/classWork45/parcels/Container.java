@@ -14,7 +14,7 @@ public class Container implements Iterable<Box>{
     public Container(String label, int numBoxes) {
         this.label = label;
         Random random = new Random();
-        //цикл ще 0 до numBoxes -1б создает новые коробки
+        // цикл от 0 до numBox-1, создает новые коробки
         this.boxes = IntStream.range(0, numBoxes)
                 .mapToObj(i -> new Box(random.nextInt(5, 11)))
                 .toList();// занесли в лист

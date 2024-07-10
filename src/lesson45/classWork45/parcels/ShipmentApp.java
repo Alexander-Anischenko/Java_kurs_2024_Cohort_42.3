@@ -80,5 +80,16 @@ public class ShipmentApp {
                 .filter(c -> c.getTotalParcels() == maxParcels)
                 .forEach(System.out::println);
 
+        System.out.println("<=======================================>");
+
+        // находим номер контейнера с макс кол посылок
+        int indexOfMaxParcelsContainer = IntStream.range(0, containers.size())
+                .filter(i -> containers.get(i).getTotalParcels() == maxParcels)
+                .findFirst()
+                .orElse(-1);
+
+        if (indexOfMaxParcelsContainer != -1) {
+            System.out.println("Container number with max parcels: " + numberOfContainer.get(indexOfMaxParcelsContainer)  + " has the maximum number of parcels: " + maxParcels);
+        }
     }
 }
