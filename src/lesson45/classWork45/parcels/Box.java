@@ -12,7 +12,7 @@ public class Box implements Iterable<Parcel>{
 
     public Box(int numParcels) {
         Random random = new Random();
-        this.parcels = Stream.generate(() -> new Parcel(random.nextDouble(0, 2))) // вес посылки от 0 до 2 кг
+        this.parcels = Stream.generate(() -> new Parcel(random.nextDouble(0, 2 + 1.5))) // вес посылки от 0 до 2 кг
                 .limit(numParcels)
                 .collect(Collectors.toList());
     }
@@ -32,7 +32,7 @@ public class Box implements Iterable<Parcel>{
     //вес Box сумма весов всех посылок
     public double weightBox() {
         return parcels.stream()
-                .mapToDouble(p -> p.getWeigt())
+                .mapToDouble(p -> p.getWeight())
                 .sum();
     }
 

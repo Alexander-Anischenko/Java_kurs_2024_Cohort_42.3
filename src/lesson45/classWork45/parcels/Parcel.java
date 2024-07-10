@@ -1,39 +1,38 @@
 package lesson45.classWork45.parcels;
 
-import java.util.Iterator;
 import java.util.Objects;
 
 public class Parcel {
-    private double weigt;
+    private double weight;
 
-    public Parcel(double weigt) {
-        this.weigt = weigt;
+    public Parcel(double weight) {
+        this.weight = weight;
     }
 
-    public double getWeigt() {
-        return weigt;
+    public double getWeight() {
+        return weight;
     }
 
-    public void setWeigt(double weigt) {
-        this.weigt = weigt;
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Parcel parcel)) return false;
-        return Double.compare(weigt, parcel.weigt) == 0;
+        return Double.compare(weight, parcel.weight) == 0;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(weigt);
+        return Objects.hashCode(weight);
     }
 
     @Override
     public String toString() {
         return "Parcel" +
-                "weigt=" + weigt +
+                "weight=" + weight +
                 ' ';
     }
 
