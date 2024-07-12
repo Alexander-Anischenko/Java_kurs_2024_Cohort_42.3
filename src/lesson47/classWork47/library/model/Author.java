@@ -72,7 +72,7 @@ public class Author {
     }
 
     public String displayAuthor(){
-        return "Name;";
+        return "Name= " + name + ", lastName= " + lastName + ", birthDay= " + birthDay;
     }
 
 }
