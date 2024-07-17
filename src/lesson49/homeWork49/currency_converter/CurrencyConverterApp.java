@@ -17,7 +17,7 @@ public class CurrencyConverterApp {
         FileHandler fileHandler = new FileHandler();
 
         try {
-            List<ExchangeRate> rates = fileHandler.loadExchangeRates("exchange_rates.txt");
+            List<ExchangeRate> rates = fileHandler.loadExchangeRates("C:/Users/ilyaa/Java course 2024/lesson_01/read_file/exchange_rates");
             converter.loadExchangeRates(rates);
         } catch (IOException e) {
             System.err.println("Error loading exchange rates: " + e.getMessage());
